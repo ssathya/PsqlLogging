@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsqlLogging", "PsqlLogging\PsqlLogging.csproj", "{BB973DAF-0381-4E01-9811-0AD5FF0E1C32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC1174F6-DA63-4595-8B3A-6B2C8B7C5B25}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB973DAF-0381-4E01-9811-0AD5FF0E1C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB973DAF-0381-4E01-9811-0AD5FF0E1C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB973DAF-0381-4E01-9811-0AD5FF0E1C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB973DAF-0381-4E01-9811-0AD5FF0E1C32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {219B798A-5EF2-40A3-BA7D-FFB89CFBA3A7}
+	EndGlobalSection
+EndGlobal
