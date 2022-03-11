@@ -63,11 +63,11 @@ Thread.Sleep(5000);
 //psLogger.Dispose();
 logMgr.LogInformation("Sleep ended");
 ```
-## Attempt 4 & 5
+### Actually 3 & 4
 Eventually this is how I'll have to use the application. The logger object will be created 
 when the application is created and injected to other classes via dependency injection. 
-For *attempt 4* I did not call the Dispose and nothing was written to the database.  *Attempt 5* 
+For *attempt 3* I did not call the Dispose and nothing was written to the database.  *Attempt 4* 
 uncommented Dispose and as expected everything until "Starting to sleep" was inserted but "Sleep ended" 
 did not. 
 
-To summarize, **Logger object needs to be disposed at the end of the application** to have logs saved in your database.
+To summarize, **Logger object needs to be disposed at the end of the application** to flush your logs into database.
