@@ -1,8 +1,9 @@
-﻿# Using PostgreSQL for Serilog
+# Using PostgreSQL for Serilog
 
-I struggled for a few hours and couldn't get PostgreSQL sync to work for my application. I also Googled/Binged for samples but there was not full example that I could copy and paste and make it work. 
+I searched and search. Bing, DuckDuckGo, Google, You, etc. Nope. No one gave me a link where I could find a 
+working example of Serilog that uses *Serilog.Sinks.Postgresql.Alternative* as the sink - no - no one likes this Sink. Did find a handful that uses *Serilog.Sinks.Postgresql*  but its not the one I wanted. 
 
-This is a working example but below is  the journey I went through until I realized what was happening.
+This is a working example but below is in [this](https://github.com/ssathya/PsqlLogging) repository. Below is the journey I took and during its course realized what I was missing.
 
 ## Attempt 1:
 ```cs
@@ -64,10 +65,8 @@ Thread.Sleep(5000);
 logMgr.LogInformation("Sleep ended");
 ```
 ### Actually 3 & 4
-Eventually this is how I'll have to use the application. The logger object will be created 
-when the application is created and injected to other classes via dependency injection. 
-For *attempt 3* I did not call the Dispose and nothing was written to the database.  *Attempt 4* 
-uncommented Dispose and as expected everything until "Starting to sleep" was inserted but "Sleep ended" 
-did not. 
+Eventually this is how I'd use the sink in my application. The logger object will be created 
+when the application is launched and injected to other classes via DI. For *attempt 3* I did not call 
+Dispose and nothing was written to the database.  *Attempt 4* uncommented Dispose and as expected everything until "Starting to sleep" was in my log table but "Sleep ended" was sent to ether not to my table!
 
 To summarize, **Logger object needs to be disposed at the end of the application** to flush your logs into database.
