@@ -3,7 +3,7 @@
 I searched and search. Bing, DuckDuckGo, Google, You, etc. Nope. No one gave me a link where I could find a 
 working example of Serilog that uses *Serilog.Sinks.Postgresql.Alternative* as the sink - no - no one likes this Sink. Did find a handful that uses *Serilog.Sinks.Postgresql*  but its not the one I wanted. 
 
-This is a working example but below is in [this](https://github.com/ssathya/PsqlLogging) repository. Below is the journey I took and during its course realized what I was missing.
+This is a working example is in [this](https://github.com/ssathya/PsqlLogging) repository. Below is the journey I took and during its course realized what I was missing.
 
 ## Attempt 1:
 ```cs
